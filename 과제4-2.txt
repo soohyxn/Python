@@ -1,0 +1,16 @@
+a = ''
+aList = []
+count = []
+
+while True :
+    a = input()
+    if(a == 'end') :
+        break
+    aList.append(a.split(','))
+
+for i in range(0,len(aList)) :
+    if aList[i][0] in count:
+        continue
+    else:
+        count.append(aList[i][0])
+print(len(count))

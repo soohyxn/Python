@@ -1,0 +1,5 @@
+print('{:>5}'.format('*'))
+print('{:>5}'.format('*'*2))
+print('{:>5}'.format('*'*3))
+print('{:>5}'.format('*'*4))
+print('{:>5}'.format('*'*5))

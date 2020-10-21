@@ -1,0 +1,8 @@
+a = ""
+result = True
+a = input()
+for i in range(0, len(a)//2) :
+   if(a[i].lower() != a[len(a)-1-i].lower()):
+       result = False
+       break
+print(result)

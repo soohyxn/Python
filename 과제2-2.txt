@@ -1,0 +1,7 @@
+R = int(input(), 16)
+G = int(input(), 16)
+B = int(input(), 16)
+
+print("%3d" % R, end = ' ')
+print("%3d" % G, end = ' ')
+print("%3d" % B)

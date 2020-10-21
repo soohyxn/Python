@@ -1,0 +1,40 @@
+a = ''
+aList = []
+student1 = {}
+student2 = {}
+number = []
+name = []
+score = []
+result = 0
+
+while True :
+    a = input()
+    if(a == 'end') :
+        break
+    aList.append(a.split(','))
+
+for i in range(0,len(aList)) :
+    if aList[i][0] in student1:
+        continue
+    else:
+        student1[aList[i][0]] = aList[i][1]
+
+number = list(student1.keys())
+name = list(student1.values())
+
+for i in range(0,len(aList)) :
+    if aList[i][0] in student2:
+        student2[aList[i][0]].append(aList[i][3])
+    else:
+        student2[aList[i][0]] = [aList[i][3]]
+
+score = list(student2.values())
+
+for i in range(0,len(score)):
+    for j in range(0,len(score[i])):
+        result = result + float(score[i][j])
+    score[i] = result / len(score[i])
+    result = 0
+
+for i in range(0,len(number)):
+    print('%s/%s/%.1f' % (number[i],name[i],score[i]))
